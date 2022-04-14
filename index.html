@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/e67fc8da26.js" crossorigin="anonymous"></script>
+    <title>D-News</title>
+</head>
+<body onload="start()">
+    
+    <div class="container-fluid">
+        <h1 id="header">My News 
+            <i class="fas fa-search" data-toggle="modal" data-target="#myModal"></i>
+        </h1>
+        <!-- Loading code -->
+        <div class="loading">
+            <p>
+                Loading
+            </p>
+            <div class="loader"></div>
+        </div>
+        <div id="top-headline">
+        </div>
+    </div>
+
+    <!-- Search code -->
+    <div class="search">
+        <!-- Nguồn tự làm -->
+        <!-- <div class="search-box">
+            <form action="">
+                <label for="keywords">Keywords</label>
+                <input id="input-key" type="search" name="input-key" autofocus>
+                <input id="submit" type="button" value="Search">
+            </form>
+            
+            <i class="fas fa-times position-times"></i>
+        </div> -->
+
+        <!-- Nguồn bootstrap modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Search News</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="keywords">Keywords</label>
+                        <input id="input-key" type="search" name="input-key" autofocus><br>
+                        
+                        <label for="from">From</label>
+                        <input id="from" type="datetime-local" name="from"><br>
+                        
+                        <label for="to">To</label>
+                        <input id="to" type="datetime-local" name="to">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default submit" data-dismiss="modal">Search</button>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
